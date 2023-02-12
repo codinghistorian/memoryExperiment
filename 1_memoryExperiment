@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.8.2 <0.9.0;
+
+contract MemoryTest {
+    //when gas limit is 3000000
+
+    // Executions step : 107
+    // Remaining gas : 2978558
+    function testUint64() public pure returns (uint64){
+        uint64 testValue = 73;
+        return testValue;
+    }
+    // Execution step : 97
+    // Remaining gas : 2978602
+    function testUint128() public pure returns (uint128){
+        uint128 testValue = 73;
+        return testValue;
+    }
+    // Execution step :100
+    // Remaining gas : 2978586
+    function testUint256() public pure returns (uint256){
+        uint256 testValue = 73;
+        return testValue;
+    }
+    //all three functions, to store uint 73, was using a whole word in memory.
+    //there wasn no meaningful differences in memory space usage.
+}
