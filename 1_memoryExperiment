@@ -7,18 +7,21 @@ contract MemoryTest {
 
     // Executions step : 107
     // Remaining gas : 2978558
+    // testUint64() - 1850 gas
     function testUint64() public pure returns (uint64){
         uint64 testValue = 73;
         return testValue;
     }
     // Execution step : 97
     // Remaining gas : 2978602
+    // testUint128() - 1850 gas
     function testUint128() public pure returns (uint128){
         uint128 testValue = 73;
         return testValue;
     }
     // Execution step :100
     // Remaining gas : 2978586
+    // testUint256() - 1790 gas
     function testUint256() public pure returns (uint256){
         uint256 testValue = 73;
         return testValue;
